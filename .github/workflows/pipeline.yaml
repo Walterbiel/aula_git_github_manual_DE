@@ -1,0 +1,17 @@
+name: Pipeline Simples
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Rodar script Python
+        run: |
+          echo "Pipeline executado com sucesso"
